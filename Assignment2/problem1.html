@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Problem 1</title>
     <style>
-        td, tr, th{
-            text-align: center;
-            border: 1px dotted;
-        }
-      table {
-        width: 100%;
-        border: 1px solid;
-      }
 
-      tr:nth-child(even) {
-          background-color: #f2f2f2;
-      }
+        td, th{
+            text-align: center;
+            border: 1px dotted #555;
+        }
+        table {
+            width: 100%;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
     </style>
   </head>
@@ -26,36 +28,41 @@
         <th colspan="4" style="color: #fc3004">STUDENT INFORMATION</th>
       </tr>
 
-      <tr>
-        <th colspan="2" style="color: #041efc">NAME AND <u>ROLL NO.</u></th>
-        <td colspan="2" style="color: #041efc">
+      <tr style="color: #041efc">
+        <th colspan="2">NAME AND <u>ROLL NO.</u></th>
+        <td colspan="2">
           Contact No. AND <u>E-mail ID</u>
         </td>
       </tr>
+
       <tr style="color: #d604fc">
         <td>Name</td>
         <td>Roll No.</td>
         <td>Contact No.</td>
         <td><u>E-mail ID</u></td>
       </tr>
+
       <tr>
         <td>A</td>
         <td>10</td>
         <td>1234567890</td>
         <td><u>abc@gmail.com</u></td>
       </tr>
+
       <tr>
         <td>B</td>
         <td>20</td>
         <td>1234567890</td>
         <td><u>xyz@gmail.com</u></td>
       </tr>
+
       <tr>
         <td>C</td>
         <td>30</td>
         <td>1234567890</td>
         <td><u>abcd@gmail.com</u></td>
       </tr>
+      
       <tr>
         <td>D</td>
         <td>40</td>
