@@ -1,0 +1,47 @@
+body{
+
+    background-image: url('../image/background.jpg');
+    background-size: cover;
+}
+
+#Address{
+    vertical-align: top;
+}
+
+td{
+    padding: 10px;
+}
+
+h3{
+    color: white;
+}
+
+h5{
+    color: white;
+}
+
+label{
+    color: white;
+}
+
+input{
+    height: 30px;
+    border-radius: 2px;
+    border:0px;
+    padding: 10px;
+}
+
+select{
+    height: 30px;
+    border-radius: 2px;
+    border:0px;
+    padding: 5px;
+}
+
+#submit_button{
+    width: 370px;
+    background-color: #4285F4;
+    color: white;
+    border: 0px;
+    border-radius: 2%;
+}
