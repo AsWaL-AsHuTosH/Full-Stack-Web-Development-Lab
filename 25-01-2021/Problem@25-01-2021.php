@@ -44,7 +44,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <form method="post" action="test_php.php">
+    <form method="post" action="Problem@25-01-2021.php">
         <label>Name</label> <input type="text" name="name" required> <br />
 
         <label>Email</label> <input type="email" name="email" required> <br />
