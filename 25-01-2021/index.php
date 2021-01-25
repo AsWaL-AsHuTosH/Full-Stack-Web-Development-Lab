@@ -17,34 +17,34 @@ if (isset($_POST['submit'])) {
         echo "<style>";
         echo ".table-output{border:solid 1px; border-collapse:collapse;}";
         echo ".td-output{border:solid 1px}";
-        echo "tr{text-align:left; border:solid 1px;}";
+        echo ".th-output{text-align:left; border:solid 1px;}";
         echo "</style>";
 
         echo "<table class=\"table-output\">"; //table opening
         echo "<tbody>"; //tbody opening
 
         echo "<tr>";
-        echo "<th>Name</th> <td class=\"td-output\">$name</td>";
+        echo "<th class=\"th-output\">Name</th> <td class=\"td-output\">$name</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<th>E-mail</th> <td class=\"td-output\">$email</td>";
+        echo "<th class=\"th-output\">E-mail</th> <td class=\"td-output\">$email</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<th>Contact</th> <td class=\"td-output\">$contact</td>";
+        echo "<th class=\"th-output\">Contact</th> <td class=\"td-output\">$contact</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<th>City</th> <td class=\"td-output\">$city</td>";
+        echo "<th class=\"th-output\">City</th> <td class=\"td-output\">$city</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<th>course</th> <td class=\"td-output\">$course</td>";
+        echo "<th class=\"th-output\">course</th> <td class=\"td-output\">$course</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<th>Interests</th>";
+        echo "<th class=\"th-output\">Interests</th>";
         echo "<td class=\"td-output\">";
         echo "<ul>";
         foreach ($interest as $int) {
