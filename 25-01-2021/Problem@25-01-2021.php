@@ -56,8 +56,7 @@ if (isset($_POST['submit'])) {
         <label>Course</label>
         <select name="course" required>
             <option>B.Tech(C.S.E)</option>
-            <option>B.Sc(I.T)
-            <option>
+            <option>B.Sc(I.T)</option>
         </select> <br />
 
         <label>Interest:</label>
