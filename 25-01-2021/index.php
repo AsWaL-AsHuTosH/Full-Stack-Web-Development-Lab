@@ -73,22 +73,22 @@ if (isset($_POST['submit'])) {
             <tbody>
                 <tr>
                     <td>Name</td>
-                    <td><input type="text" name="name" required></td>
+                    <td><input type="text" name="name" value= "<?php if(isset($_POST['name'])) {echo $_POST['name'];}?>" required></td>
                 </tr>
 
                 <tr>
                     <td>E-mail</td>
-                    <td><input type="email" name="email" required></td>
+                    <td><input type="email" name="email" value= "<?php if(isset($_POST['email'])) {echo $_POST['email'];}?>" required></td>
                 </tr>
 
                 <tr>
                     <td>Contact</td>
-                    <td><input type="text" name="contact" required></td>
+                    <td><input type="tel" name="contact" pattern="[0-9]{10}" value= "<?php if(isset($_POST['contact'])) {echo $_POST['contact'];}?>" required></td>
                 </tr>
 
                 <tr>
                     <td>City</td>
-                    <td><input type="text" name="city" required></td>
+                    <td><input type="text" name="city" value= "<?php if(isset($_POST['city'])) {echo $_POST['city'];}?>" required></td>
                 </tr>
 
                 <tr>
