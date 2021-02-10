@@ -9,7 +9,8 @@
         $sqlQuery = "INSERT INTO `users` (`id`, `username`, `gender`, `email`, `city`) VALUES (NULL, '$username', '$gender', '$email', '$city')";
         if(mysqli_query($db, $sqlQuery))
         {
-            echo "Data added into the database.";
+            header("Location: index.php");
+            exit();
         }
         else
         {
@@ -24,7 +25,7 @@
         <link rel="stylesheet" href="CSS/styles.css"/>
     </head>
     <body>
-        <form method="post" action="create.php">
+        <form method="post" action="add.php">
             <table class="centered-table">
                 <tbody>
                     <tr>

@@ -14,7 +14,8 @@
         $sqlQuery = "UPDATE `users` SET `username`='$username', `gender`='$gender', `email`='$email', `city`='$city' WHERE `id`=$id";
         if(mysqli_query($db, $sqlQuery))
         {
-            echo "Data Updated.";
+            header("Location: index.php");
+            exit();
         }
         else
         {
@@ -43,7 +44,7 @@
         <link rel="stylesheet" href="CSS/styles.css"/>
     </head>
     <body>
-        <form method="post" action="update.php?id=<?php echo $id ?>">
+        <form method="post" action="edit.php?id=<?php echo $id ?>">
             <table class="centered-table">
                 <tbody>
                     <tr>

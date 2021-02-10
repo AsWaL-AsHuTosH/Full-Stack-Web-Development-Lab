@@ -41,14 +41,14 @@
                     <td><?php echo $row['email'] ?></td>
                     <td><?php echo $row['city'] ?></td>
                     <td>
-                        <button onclick="document.location = 'update.php?id=<?php echo $row['id'] ?>'">UPDATE</button>
+                        <button onclick="document.location = 'edit.php?id=<?php echo $row['id'] ?>'">EDIT</button>
                         <button onclick="document.location = 'delete.php?id=<?php echo $row['id'] ?>'">DELETE</button>
                     </td>
                 </tr>
             <?php endwhile;?>
                 <tr>
                     <td colspan="6" align="center">
-                        <button onclick="document.location = 'create.php'">ADD USER</a></button>
+                        <button onclick="document.location = 'add.php'">ADD USER</button>
                     </td>
                 </tr>
                 </tbody>
