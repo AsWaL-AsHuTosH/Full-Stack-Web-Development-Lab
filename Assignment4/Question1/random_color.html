@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Random Color</title>
+        <style>
+            div
+            {
+                background-color: blue;
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='circle' onclick="ChangeColor()">
+        </div>
+        <script>
+            circleDiv =  document.getElementById('circle');
+            function ChangeColor()
+            {
+                //Valid hex code for colors range from 000000-ffffff
+                RandomNumber = Math.ceil(Math.random() * 0xffffff);
+                circleDiv.style.backgroundColor = '#' + RandomNumber.toString(16);
+            }
+        </script>
+    <body>
+</html>
