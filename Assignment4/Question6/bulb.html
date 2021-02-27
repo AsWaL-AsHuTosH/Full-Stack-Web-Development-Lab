@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Bulb</title>
+    </head>
+    <body>
+        <img id='bulb' src='images/bulb-off.png' width='350' height='500'/>
+        <img id='button' src='images/button-off.jpg' width='80' height='160' onclick="ToggleBulb()"/>
+        <script>
+            bulbState = ['images/bulb-off.png', 'images/bulb-on.png'];
+            buttonState = ['images/button-off.jpg', 'images/button-on.jpg'];
+            bulb = document.getElementById('bulb');
+            button = document.getElementById('button');
+            currSate = 0;
+            function ToggleBulb()
+            {
+                currSate ^= 1;
+                button.src = buttonState[currSate];
+                bulb.src = bulbState[currSate];
+            }
+        </script>
+    </body>
+</html>
