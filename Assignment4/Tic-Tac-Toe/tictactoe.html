@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Tic-Tac-Toe</title>
+        <style>
+            table{
+                border: 1px solid;
+                border-collapse: collapse;
+            }
+
+            td{
+                border: 1px solid;
+            }
+
+            .cell{
+                padding-left: 30px;
+                padding-top: 30px;
+                width: 50px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <div class='cell'></div>
+                </td>
+                <td>
+                    <div class='cell'></div>
+                </td>
+                <td>
+                    <div class='cell'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='cell'></div>
+                </td>
+                <td>
+                    <div class='cell'></div>
+                </td>
+                <td>
+                    <div class='cell'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class='cell'></div>
+                </td>
+                <td>
+                    <div class='cell'></div>
+                </td>
+                <td>
+                    <div class='cell'></div>
+                </td>
+            </tr>
+        </table>
+        <h3>Current Turn:<span id='turn-display'> X</span></h3>
+        <h3 id='win-display'></h3>
+        <script>
+            let turn = 1;
+            const PLAYER = ["X", "O"];
+            const CELLS = document.getElementsByClassName('cell');
+            for(let i = 0; i < CELLS.length; ++i)
+            {
+                CELLS[i].addEventListener('click', function(){
+                    if(CELLS[i].innerHTML == "X" || CELLS[i].innerHTML == "O") return;
+                    turn ^= 1;
+                    CELLS[i].innerHTML = PLAYER[turn];
+                    CheckForWinner();
+                });
+            }
+
+            function CheckForWinner()
+            {
+                //Row-Wise
+                for(var i = 0; i < 3; ++i)
+                {
+                    var idx = i * 3;
+
+                    if(CELLS[idx].innerHTML == '') continue;
+
+                    if
+                    (
+                        CELLS[idx].innerHTML == CELLS[idx + 1].innerHTML
+                                    &&
+                        CELLS[idx + 1].innerHTML == CELLS[idx + 2].innerHTML
+                    )
+                    {
+                        document.getElementById('win-display').innerHTML = CELLS[idx].innerHTML + ' Won!';
+                        return;
+                    }
+                }
+
+                //Column-Wise
+                for(var i = 0; i < 3; ++i)
+                {                    
+                    if(CELLS[i].innerHTML == '') continue;
+
+                    if
+                    (
+                        CELLS[i].innerHTML == CELLS[i + 3].innerHTML
+                                    &&
+                        CELLS[i + 3].innerHTML == CELLS[i + 6].innerHTML
+                    )
+                    {
+                        document.getElementById('win-display').innerHTML = CELLS[i].innerHTML + ' Won!';
+                        return;
+                    }
+                }
+
+                //Diagonally
+                if(CELLS[4].innerHTML == '') return;
+
+                if(
+                    CELLS[0].innerHTML == CELLS[4].innerHTML
+                                    &&
+                    CELLS[4].innerHTML == CELLS[8].innerHTML
+                )
+                {
+                    document.getElementById('win-display').innerHTML = CELLS[4].innerHTML + ' Won!';
+                    return;
+                }
+
+                if(
+                    CELLS[2].innerHTML == CELLS[4].innerHTML
+                                    &&
+                    CELLS[4].innerHTML == CELLS[6].innerHTML
+                )
+                {
+                    document.getElementById('win-display').innerHTML = CELLS[4].innerHTML + ' Won!';
+                    return;
+                }
+            }
+        </script>
+    </body>
+</html>
