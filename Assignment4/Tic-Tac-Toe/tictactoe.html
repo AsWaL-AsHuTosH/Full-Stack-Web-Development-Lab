@@ -67,6 +67,7 @@
                     if(CELLS[i].innerHTML == "X" || CELLS[i].innerHTML == "O") return;
                     turn ^= 1;
                     CELLS[i].innerHTML = PLAYER[turn];
+                    document.getElementById('turn-display').innerHTML = PLAYER[turn ^ 1];
                     CheckForWinner();
                 });
             }
